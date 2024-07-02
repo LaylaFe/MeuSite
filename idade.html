@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/missao.css">
+    
+	<title>Função exibir média</title>
+</head>
+
+<body>
+<div>
+    <form class="formulario" method="post">
+        <input type="number" id="idade" value="" class="idade">
+        <input type="text" id="Resultado" value="" class="text">
+        <br><br>
+        <input type="button" onclick="javascript:verificarIdade();" name="name" value="Enviar" class="input">
+        <br><br>
+    </form>
+</div>
+
+<script type="text/javascript">
+    function verificarIdade() {
+    const idade = parseFloat(document.getElementById('idade').value);
+
+    if (isNaN(idade)) {
+        alert('Por favor, digite um número válido para a idade.');
+        return;
+    }
+
+    if (idade < 18) {
+        alert('Você é menor de idade.');
+    } else {
+        alert('Você é maior de idade.');
+    }
+}
+
+</script>
+</body>
+</html>

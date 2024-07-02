@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/idade.css">
+    
+	<title>Funções</title>
+</head>
+
+<body>
+    <div>
+     
+    <form method="post">
+                <h2>Calcular Média Aritmética</h2>
+                <p>Inserir 5 números para calcular a média</p>
+                    <br><br>
+            <label>Valor 01</label>
+            <input type="number" id="valor01" value="" class="valor">
+            <br><br>
+            <label>Valor 02</label>
+            <input type="number" id="valor02" value="" class="valor">
+            <br><br>
+            <label>Valor 03</label>
+            <input type="number" id="valor03" value="" class="valor">
+            <br><br>
+            
+            <input type="text" id="txtResultado" value="" class="text" style="border: none;">
+            <br><br>
+            <input type="button" onclick="javascript:calculo();" name="name" value="Enviar" class="input">
+    
+    </form>
+    </div>
+
+    <div>
+        <h2>Digite sua idade</h2>
+        <input type="number" id="idade" placeholder="Digite sua idade">
+        <button onclick="verificarIdade()">Enviar</button>
+        <p id="resultado"></p>
+    </div>
+    <br>
+    <div>
+        <h2>Número Mês</h2>
+        <p>Digite um número entre um 1 a 12</p>
+        <input type="number" id="numeroMes" placeholder="Digite um número de 1 a 12">
+        <button onclick="exibirMes()">Verificar</button>
+        <p id="resultadomes"></p>
+    </div>
+
+<script type="text/javascript">
+
+function verificarIdade() {
+            const idade = parseFloat(document.getElementById('idade').value);
+
+            if (isNaN(idade)) {
+                document.getElementById('resultado').textContent = 'Por favor, digite uma idade válida.';
+                return;
+            }
+
+            if (idade < 18) {
+                document.getElementById('resultado').textContent = 'Você é menor de idade.';
+            } else {
+                document.getElementById('resultado').textContent = 'Você é maior de idade.';
+            }
+        }
+
+    function calculo() {
+        var valor01 = parseFloat(document.getElementById('valor01').value);
+        var valor02 = parseFloat(document.getElementById('valor02').value);
+        var valor03 = parseFloat(document.getElementById('valor03').value);
+
+  var resultado = parseFloat((valor01 + valor02 + valor03) / 3);
+
+  document.getElementById('txtResultado').setAttribute("value", resultado);
+}
+
+
+function exibirMes() {
+            const numeroMes = parseInt(document.getElementById('numeroMes').value);
+
+            if (isNaN(numeroMes) || numeroMes < 1 || numeroMes > 12) {
+                document.getElementById('resultado').textContent = 'Número inválido. Digite um valor entre 1 e 12.';
+            } else {
+                const meses = [
+                    'Janeiro', 'Fevereiro', 'Março', 'Abril',
+                    'Maio', 'Junho', 'Julho', 'Agosto',
+                    'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+                ];
+                const nomeMes = meses[numeroMes - 1];
+                document.getElementById('resultadomes').textContent = `O mês correspondente é ${nomeMes}.`;
+            }
+        }
+</script>
+</body>
+</html>

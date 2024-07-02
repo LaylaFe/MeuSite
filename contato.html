@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./css/missao.css">
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+	
+    	<title>Missão de Amor</title>
+
+</head>
+
+<body>
+
+    <header>
+
+		<a href="index.html" id="logo"><img src="imagens/Logo.png" width="60px" height="60px">&nbsp;&nbsp; Missão de Amor</a>
+
+		<button class="openMenu">&#9776;</button>
+
+		<nav class="menu">
+            <ul>
+			<button class="closeMenu">X</button>
+
+			<li><a href="index.html">Home</a></li>
+
+            <!-- Agrupa o botão de doe com a batida do coração. -->
+            <li><a href="doe.html" style="padding-bottom: 20px;">
+                
+                <div class="texto"> Doe </div>
+                <div class="pulsar">❤️</div>
+            </a></li>
+
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Ações</a>
+            <div class="dropdown-content">    
+                <a href="acoes.html">Ações</a>
+                <a href="galeria.html">Fotos</a>
+            </div>
+            </li>
+            
+            <li><a href="contato.html"  class="active">Fale Conosco</a></li>
+            
+            <!-- Agrupa o botão de busca. 
+            <li><div class="search-box">
+                <button class="search">
+                    &nbsp;🔍&nbsp;
+                </button>
+                <div class="search-input">
+                    <input type="text" placeholder="Buscar..."/>
+                </div>
+            </div></li>-->
+            </ul>
+        </nav>
+		
+	</header>
+
+    <main class="maincontato">
+       
+            <h1>Fale Conosco</h1>
+
+    </main>
+
+	<section>
+
+        <div class="backcolor">
+            <br><br>
+                <h1>Preencha os dados a baixo!</h1>
+            <br><br>
+        </div>
+        
+        <br><br><br>
+        
+        <form>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nomeid" placeholder="Seu nome" required="required" name="nome" />
+            <br><br>          
+            <label for="fone">Telefone:</label><br>
+            <input type="tel" id="foneid" placeholder="(xx)xxxxx-xxxx" name="fone" />
+            <br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="emailid" placeholder="seuemail@mail.com" name="email" />
+            <br><br>
+            <label for="mensagem">Mensagem:</label><br>          
+            <textarea placeholder="Deixe sua mensagem"></textarea>
+            <br><br>
+            <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+          </form>
+                
+	</section>
+	
+	<footer>
+        <div class="redes">
+            <a href="https://www.instagram.com/missao.deamor/" target="_blank"><img src="imagens/instagram.png" width="45px" height="45px"></a>
+        </div>
+        
+        <div>
+		    <a href="https://www.facebook.com/profile.php?id=100026298053191" target="_blank"><img src="imagens/facebook.png" width="45px" height="45px"></a>
+        </div>
+    
+	</footer>
+    
+    <div class="by"><br>Criado por: Layla Fe<br></div>
+	
+    <script src="js/missao.js"></script>
+</body>
